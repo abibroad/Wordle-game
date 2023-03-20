@@ -33,3 +33,24 @@
 .header-buttons .button {
   width: 28px;
 }
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding-top: 50px;
+}
+
+.tile {
+  display: flex;
+  border: grey solid 2px;
+  height: 58px;
+  width: 58px;
+}
