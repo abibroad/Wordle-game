@@ -38,6 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .game {
@@ -45,12 +46,53 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 5px;
-  padding-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .tile {
   display: flex;
-  border: grey solid 2px;
+  border: #d3d6da solid 2px;
   height: 58px;
   width: 58px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.keyboard-button {
+  display: flex;
+  background-color: #d3d6da;
+  color: black;
+  width: 48px;
+  height: 58px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6px 8px 0;
+  font-family: "Antic Slab", serif;
+  border-radius: 4px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.keyboard-button.enter {
+  flex: 1.25;
+  font-size: 12px;
+}
+
+.keyboard-button.backspace {
+  flex: 1.25;
+}
+
+.backspace-button {
+  height: 24px;
+  width: 24px;
 }
