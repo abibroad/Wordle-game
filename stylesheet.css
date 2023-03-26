@@ -23,6 +23,10 @@ body {
   border-bottom: 0.25px solid grey;
 }
 
+.menu_bar {
+  width: 92px;
+}
+
 .menu_bar div {
   width: 25px;
   height: 3px;
@@ -72,6 +76,16 @@ body {
   flex-grow: 1;
 }
 
+/* row3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+} */
+
+/* .row3 ::before {
+  content: "";
+  background-color: white;
+} */
+
 .tile {
   display: flex;
   border: #d3d6da solid 2px;
@@ -85,6 +99,48 @@ body {
   max-width: 58px;
   max-height: 58px;
   width: 100%;
+}
+
+.tile.row3.one {
+  animation: letter-animation 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.tile.row3.two {
+  animation: letter-animation 1s ease forwards;
+  animation-delay: 4s;
+}
+
+.tile.row3.three {
+  animation: letter-animation 1s ease forwards;
+  animation-delay: 5s;
+}
+
+.tile.row3.four {
+  animation: letter-animation 1s ease forwards;
+  animation-delay: 6s;
+}
+
+.tile.row3.five {
+  animation: letter-animation 1s ease forwards;
+  animation-delay: 7s;
+}
+
+@keyframes letter-animation {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    background: white;
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+    background-color: #6aaa64;
+    color: white;
+  }
 }
 
 .keyboard {
@@ -125,6 +181,18 @@ body {
 .backspace-button {
   height: 24px;
   width: 24px;
+}
+
+.keyboard-button.colour {
+  animation: colour-change 500ms ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes colour-change {
+  to {
+    background-color: #6aaa64;
+    color: white;
+  }
 }
 
 .yellow {
